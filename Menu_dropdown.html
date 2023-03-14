@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Menu dropdown</title>
+    <style>
+        body{
+            margin: 0;
+        }
+      header h1 {
+        background-color: red;
+        margin: 0;
+        padding: 20px;
+        text-align: right;
+      }
+      #navigate {
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+      }
+      .menu {
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .menu li a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .menu li {
+        padding: 10px;
+        display: inline-block;
+      }
+
+      .list-item:hover {
+        background: black;
+      }
+
+      .menu li:nth-child(2):hover .dropdown,
+      .menu li:nth-child(3):hover .dropdown {
+        display: block;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 42.5px;
+        background-color: white;
+        display: none;
+        width: auto;
+        max-width: 150px;
+        padding: 0;
+      }
+
+      .dropdown li {
+        display: block;
+      }
+
+      .dropdown li a {
+        color: blue;
+        font-size: 16px;
+      }
+
+      .dropdown li:hover {
+        background: rgb(220, 219, 219);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Demo of dropdown</h1>
+    </header>
+    <nav id="navigate">
+      <ul class="menu">
+        <li class="list-item">
+          <a href="#">Link 1</a>
+        </li>
+        <li class="list-item">
+          <a href="#">Link 2</a>
+          <ul class="dropdown">
+            <li><a href="#">DD_link_1</a></li>
+            <li><a href="#">DD_link_2</a></li>
+            <li><a href="#">DD_link_3</a></li>
+          </ul>
+        </li>
+        <li class="list-item">
+          <a href="#">Link 3</a>
+          <ul class="dropdown">
+            <li><a href="#">DD_link_1</a></li>
+            <li><a href="#">DD_link_2</a></li>
+            <li><a href="#">DD_link_3</a></li>
+            <li><a href="#">DD_link_4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
